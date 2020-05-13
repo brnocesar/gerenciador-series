@@ -1,5 +1,7 @@
 <?php
 
+$DATABASE_URL=parse_url('postgres://wuimuaaspocqbd:d5f5be5d8af14630370179d5fa07d0e503a2c8393ef5270c6bccf79ccff9ad5b@ec2-18-235-20-228.compute-1.amazonaws.com:5432/da78d33kq5vfnq');
+
 use Illuminate\Support\Str;
 
 return [
@@ -15,7 +17,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    // 'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,19 +67,32 @@ return [
         ],
 
         'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
+            'driver'         => 'pgsql',
+            'host'           => $DATABASE_URL["host"],
+            'port'           => $DATABASE_URL["port"],
+            'database'       => ltrim($DATABASE_URL[""], "/"),
+            'username'       => $DATABASE_URL["user"],
+            'password'       => $DATABASE_URL["pass"],
+            'charset'        => 'utf8',
+            'prefix'         => '',
             'prefix_indexes' => true,
-            'schema' => 'public',
-            'sslmode' => 'prefer',
+            'schema'         => 'public',
+            'sslmode'        => 'prefer',
         ],
+        // 'pgsql' => [
+        //     'driver' => 'pgsql',
+        //     'url' => env('DATABASE_URL'),
+        //     'host' => env('DB_HOST', '127.0.0.1'),
+        //     'port' => env('DB_PORT', '5432'),
+        //     'database' => env('DB_DATABASE', 'forge'),
+        //     'username' => env('DB_USERNAME', 'forge'),
+        //     'password' => env('DB_PASSWORD', ''),
+        //     'charset' => 'utf8',
+        //     'prefix' => '',
+        //     'prefix_indexes' => true,
+        //     'schema' => 'public',
+        //     'sslmode' => 'prefer',
+        // ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
