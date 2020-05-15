@@ -9,7 +9,7 @@ Séries
 @include('mensagem')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('adicionar_serie') }}" class="btn btn-success mb-2" style="font-size: 80%"><i class="fas fa-plus mr-2"></i>Adicionar</a>
+    <a href="{{ route('adicionar_serie') }}" class="btn btn-success mb-2"><i class="fas fa-plus mr-2"></i>Adicionar</a>
 </div>
 
 <ul class="list-group">

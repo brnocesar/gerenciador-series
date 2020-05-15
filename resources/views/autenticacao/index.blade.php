@@ -24,14 +24,14 @@ Entrar
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mb-2 mt-2" style="font-size: 80%">
+            <button type="submit" class="btn btn-primary mb-2 mt-2">
                 <i class="fas fa-sign-in-alt mr-2"></i>Entrar
             </button>
         </div>
     </form>
 
     <div class="d-flex justify-content-center">
-        <a class="btn btn-dark mb-2 mt-2" style="font-size: 80%" href="{{ route('pagina_registro') }}">
+        <a class="btn btn-dark mb-2 mt-2" href="{{ route('pagina_registro') }}">
             <i class="fas fa-user-plus mr-2"></i>Criar usuário
         </a>
     </div>

@@ -29,7 +29,7 @@ Criar usuário
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mb-2 mr-2" style="font-size: 80%">
+            <button type="submit" class="btn btn-primary mb-2 mr-2">
                 <i class="fas fa-user-plus mr-2"></i>Criar usuário
             </button>
         </div>

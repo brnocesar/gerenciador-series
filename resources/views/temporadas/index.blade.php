@@ -9,7 +9,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
 @include('mensagem')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2" style="font-size: 80%">
+    <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2">
         <i class="fas fa-backspace mr-2"></i>Voltar
     </a>
 </div>
