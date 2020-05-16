@@ -11,6 +11,15 @@ body {
     background: #303c41;
 }
 
+::-moz-selection {
+    background: #abbfcf;
+    color: #283438;
+}
+::selection {
+    background: #abbfcf;
+    color: #283438;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lucida Console", Courier, monospace;
     font-weight: 500;
@@ -18,6 +27,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button, a.btn {
+    border-radius: 6px;
+}
+
+button.back-btn, a.back-btn {
+    background-color: #abbfcf;
+    border: none;
+    color: #303c41;
     border-radius: 6px;
 }
 
@@ -63,21 +79,107 @@ button, a.btn {
 }
 
 /* series - index */
-.list-group-item {
+.list-group-item.series {
     background-color: #f8dce9;
     border: 1px solid #cf81a5;
     color: #410320;
 }
 
-.list-group-item > a {
+.list-group-item.series > a {
     color: #410320;
 }
 
-.list-group-item > a:hover {
+.list-group-item.series > a:hover {
     color: #812852
 }
 
-/* login */
+/* series create - begin */
+.form-group > input.series {
+    background-color: #303c41;
+    border: 1px solid #cf81a5;
+    color: #ffd0e6;
+    border-radius: .3rem;
+}
+.form-group > input.series:focus {
+    background-color: #262f33;
+    border: 1px solid #cf81a5;
+    color: #ffd0e6;
+    border-radius: .3rem;
+}
+
+.form-group > label.series {
+    font-weight: 600;
+    margin-bottom: .1rem;
+    color: #cf81a5;
+}
+
+button.series, a.series {
+    background-color: #cf81a5;
+    border: none;
+    color: #dee2e6;
+    border-radius: 6px;
+}
+button.series:hover, a.series:hover {
+    background-color: #a35579;
+    border: none;
+    transition: 0.9s;
+    color: #bdc3c9;
+}
+
+.jumbotron.series {
+    background-color: #f8dce9;
+    border: none;
+}
+
+/* input number spinners - begin */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.arrows-qtd {
+    float: left;
+    position: relative;
+    height: 42px;
+}
+
+.quantity-button {
+    cursor: pointer;
+    height: 10px;
+    border-left: 1px solid #cf81a5;
+    width: 20px;
+    text-align: center;
+    color: #cf81a5;
+    font-size: 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.quantity-button.arrows-up {
+    position: absolute;
+    height: 40%;
+    top: 2px;
+    border-bottom: 1px solid #cf81a5;
+}
+
+.quantity-button.arrows-down {
+    position: absolute;
+    bottom: 6px;
+    height: 40%;
+}
+/* input number spinners - end */
+/* series create - end */
+
+/* login - begin */
 .form-group > input.form-auth {
     background-color: #303c41;
     border: 1px solid #36a148;
@@ -114,8 +216,9 @@ button.form-auth:hover, a.form-auth:hover {
     background-color: #bce4c3;
     border: none;
 }
+/* login - end */
 
-/* register */
+/* register - begin */
 .form-group > input.form-register {
     background-color: #303c41;
     border: 1px solid #a19136;
@@ -152,7 +255,28 @@ button.form-register:hover, a.form-register:hover {
     background-color: #e4ddbc;
     border: none;
 }
+/* register - end */
 
+/* temporadas - begin */
+.list-group-item.temporadas {
+    background-color: #dceff8;
+    border: 1px solid #7db3cc;
+    color: #01283a;
+}
+
+.list-group-item.temporadas > a {
+    color: #01283a;
+}
+
+.list-group-item.temporadas > a:hover {
+    color: #1f5168;
+}
+
+.jumbotron.temporadas {
+    background-color: #dceff8;
+    border: none;
+}
+/* temporadas - end */
 
 
 

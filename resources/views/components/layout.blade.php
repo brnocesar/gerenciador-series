@@ -16,11 +16,15 @@
     <body>
         @include('components.navbar')
 
+        {{-- @dd($_SERVER['PATH_INFO']) --}}
+
         <div class="container">
 
             <div class="jumbotron
                 @if ( $_SERVER['PATH_INFO'] == '/entrar' ) form-auth @endif
                 @if ( $_SERVER['PATH_INFO'] == '/registrar' ) form-register @endif
+                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' ) series @endif
+                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' AND ( isset(explode('/', $_SERVER['PATH_INFO'])[3]) AND (explode('/', $_SERVER['PATH_INFO']))[3] == 'temporadas') ) temporadas @endif
             ">
                 <h1>@yield('cabecalho')</h1>
             </div>

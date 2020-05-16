@@ -9,7 +9,7 @@ Episódios da {{$temporada->numero}}<sup>a</sup> Temporada de <i>{{ $temporada->
 @include('components.flash-message')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('listar_temporadas', $temporada->serie->id) }}" class="btn btn-dark mb-2">
+    <a href="{{ route('listar_temporadas', $temporada->serie->id) }}" class="btn btn-dark mb-2 back-btn">
         <i class="fas fa-backspace mr-2"></i>Voltar
     </a>
 </div>

@@ -38,14 +38,14 @@ After that try to login again.
 You can do this in two different ways:
 - using the interface web  
 Just access Heroku web page and look for a button `new` available in somewhere (it's really easy to find it), click on it then in `Create new app`.  
-After been redirect to a new page, shoose a unique name for your app and click on `Create app`.  
-Then you will be sent to a page with "deploy instructions". Check if the selected method is `Heroku Git` and follow the right instructions for you case.
+After been redirect to a new page, choose a unique name for your app and click on `Create app`.  
+Then you will be sent to a page with "deploy instructions". Check if `Heroku Git` is the selected method and follow the instructions for you case.
 
 - using the command line
 
 ### 3. General configuration
 #### 3.1. Adding `heroku` remote
-If your project is already a git repository the next is to add the `heroku` remote, so in your project  directory run the following command:
+If your project is already a git repository the next to is add `heroku` remote, so in your project  directory run the following command:
 ```
 $ heroku git:remote -a <unique-app-name>
 ```
