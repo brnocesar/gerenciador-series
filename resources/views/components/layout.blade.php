@@ -17,11 +17,15 @@
         @include('components.navbar')
 
         <div class="container">
-            <div class="jumbotron">
+
+            <div class="jumbotron
+                @if ( $_SERVER['PATH_INFO'] == '/entrar' ) form-auth @endif
+            ">
                 <h1>@yield('cabecalho')</h1>
             </div>
 
             @yield('conteudo')
+
         </div>
 
         @stack('body')

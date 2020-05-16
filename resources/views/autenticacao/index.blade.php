@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('cabecalho')
 Entrar
@@ -6,7 +6,7 @@ Entrar
 
 @section('conteudo')
 
-@include('mensagem')
+@include('components.flash-message')
 
 <div class="container col-6 justify-content-center">
 
@@ -15,16 +15,16 @@ Entrar
 
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required class="form-control">
+            <input type="email" name="email" id="email" required class="form-control form-auth">
         </div>
 
         <div class="form-group">
             <label for="password">Senha</label>
-            <input type="password" name="password" id="password" required min="1" class="form-control">
+            <input type="password" name="password" id="password" required min="1" class="form-control form-auth">
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mb-2 mt-2">
+            <button type="submit" class="btn btn-primary mb-2 mt-2 form-auth">
                 <i class="fas fa-sign-in-alt mr-2"></i>Entrar
             </button>
         </div>
