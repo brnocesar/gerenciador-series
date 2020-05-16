@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('cabecalho')
 Adicionar Série
@@ -6,7 +6,7 @@ Adicionar Série
 
 @section('conteudo')
 
-@include('mensagem')
+@include('components.flash-message')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2"><i class="fas fa-backspace mr-2"></i>Voltar</a>

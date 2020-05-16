@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('cabecalho')
 Criar usuário
@@ -6,7 +6,7 @@ Criar usuário
 
 @section('conteudo')
 
-@include('mensagem')
+@include('components.flash-message')
 
 <div class="container col-6 justify-content-center">
 

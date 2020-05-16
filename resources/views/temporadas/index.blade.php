@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('cabecalho')
 Temporadas de <i>{{ $serie->nome }}</i>
@@ -6,7 +6,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
 
 @section('conteudo')
 
-@include('mensagem')
+@include('components.flash-message')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2">

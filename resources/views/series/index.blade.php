@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('cabecalho')
 Séries
@@ -6,7 +6,7 @@ Séries
 
 @section('conteudo')
 
-@include('mensagem')
+@include('components.flash-message')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('adicionar_serie') }}" class="btn btn-success mb-2"><i class="fas fa-plus mr-2"></i>Adicionar</a>
