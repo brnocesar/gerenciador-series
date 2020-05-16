@@ -1,7 +1,11 @@
 # sandbox-laravel-series
 
-This project started as a "fork" from a learning project made during a course about Laravel at Alura.
+:brazil: Ese projeto começou como "fork" de um projeto desenvolvido enquanto acompanhava o curso de Laravel da ALura.
+:uk: This project started as a "fork" from a learning project made during a course about Laravel at Alura.
 
+Durante o curso foi desenvolvido um sistema para gerenciar as séries que o usuário estivesse acompanhando, dessa forma ele poderia separar em temporadas e marcar episódios que já assistiu .
+
+Foi feito o _deploy_ da aplicação no Heroku e abaixo é possível acompanhar os passos necessários.
 The application was deployed into Heroku and below you can see my steps to do this.
 
 

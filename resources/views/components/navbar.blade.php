@@ -9,11 +9,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="container navbar-nav mr-auto">
                 <span class="navbar-cont">
-                    <li class="nav-item active">
+                    <li class="nav-item 
+                        @if ( $_SERVER['PATH_INFO'] == '/' ) active @endif
+                    ">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item 
+                        @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' ) active @endif
+                    ">
                         <a class="nav-link" href="{{ route('listar_series') }}">Séries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Filmes</a>
+                        <a class="nav-link" href="#">Filmes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeste" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

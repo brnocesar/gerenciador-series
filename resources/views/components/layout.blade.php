@@ -9,6 +9,7 @@
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
         <link href="/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
         @stack('css')
         <title>@yield('titulo')</title>
     </head>
@@ -25,6 +26,7 @@
                 @if ( $_SERVER['PATH_INFO'] == '/registrar' ) form-register @endif
                 @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' ) series @endif
                 @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' AND ( isset(explode('/', $_SERVER['PATH_INFO'])[3]) AND (explode('/', $_SERVER['PATH_INFO']))[3] == 'temporadas') ) temporadas @endif
+                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'temporadas' AND ( isset(explode('/', $_SERVER['PATH_INFO'])[3]) AND (explode('/', $_SERVER['PATH_INFO']))[3] == 'episodios') ) episodios @endif
             ">
                 <h1>@yield('cabecalho')</h1>
             </div>
@@ -37,3 +39,7 @@
             <script src="/assets/js/vendor.min.js"></script>
     </body>
 </html>
+
+<script>
+    // metodo em JS para definir qual estilo será aplicado no jumbotron e itens da navbar
+</script>

@@ -1,0 +1,26 @@
+.navbar-user {
+    display: flex; 
+    flex-direction: row; 
+    flex-grow: 0; 
+    align-self: flex-end
+}
+
+@media (min-width: 992px) {
+    ul .navbar-nav {
+        display: flex; 
+        flex-direction: row; 
+        align-content: space-between;
+        align-content: center;
+    }
+
+    .navbar-cont {
+        display: flex; 
+        flex-direction: row; 
+        flex-grow: 1; 
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 991px) {
+
+}

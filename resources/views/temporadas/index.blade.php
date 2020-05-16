@@ -15,6 +15,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
 </div>
 
 <ul class="list-group">
+
     @foreach ($serie->temporadas as $temporada)
         <li class="list-group-item d-flex justify-content-between align-items-center temporadas">
             <a href="{{ route('listar_episodios', $temporada->id) }}">
@@ -25,6 +26,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
             </span>
         </li>
     @endforeach
+    
 </ul>
 
 @endsection

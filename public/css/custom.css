@@ -51,33 +51,6 @@ button.back-btn, a.back-btn {
     border: none;
 }
 
-.navbar-user {
-    display: flex; 
-    flex-direction: row; 
-    flex-grow: 0; 
-    align-self: flex-end
-}
-
-@media (min-width: 992px) {
-    ul .navbar-nav {
-        display: flex; 
-        flex-direction: row; 
-        align-content: space-between;
-        align-content: center;
-    }
-
-    .navbar-cont {
-        display: flex; 
-        flex-direction: row; 
-        flex-grow: 1; 
-        align-self: flex-start;
-    }
-}
-
-@media (max-width: 991px) {
-
-}
-
 /* series - index */
 .list-group-item.series {
     background-color: #f8dce9;
@@ -259,8 +232,8 @@ button.form-register:hover, a.form-register:hover {
 
 /* temporadas - begin */
 .list-group-item.temporadas {
-    background-color: #dceff8;
-    border: 1px solid #7db3cc;
+    background-color: #b2e0f5;
+    border: 1px solid #5597b6;
     color: #01283a;
 }
 
@@ -273,180 +246,43 @@ button.form-register:hover, a.form-register:hover {
 }
 
 .jumbotron.temporadas {
-    background-color: #dceff8;
+    background-color: #b2e0f5;
     border: none;
 }
 /* temporadas - end */
 
-
-
-
-
-
-
-
-
-
-
-.wrapper {
-    padding: 100px 12px 0 12px;
+/* episodios - begin */
+.list-group-item.episodios {
+    background-color: #f5cbb2;
+    border: 1px solid #aa683d;
+    color: #3a1b01;
 }
 
-/* .table-responsive[data-pattern="priority-columns"] {
-    width: 100%;
-    margin-bottom: 20px;
-    overflow-y: hidden;
-    overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    border-radius: 3px;
-    border: 0px solid #303841 !important;
-    -webkit-overflow-scrolling: touch;
-} */
-#arrow-div {
-    display: flex;
-    align-items: end;
+.list-group-item.episodios > a {
+    color: #01283a;
 }
 
-.table td, .table th {
-    padding: .2rem;
-    vertical-align: top;
-    border-top: 1px solid #485561;
+.list-group-item.episodios > a:hover {
+    color: #683a1f;
 }
 
-.table tr:hover, .table tr:hover {
-    color: #FFF;
+button.episodios, a.episodios {
+    background-color: #a75f30;
+    border: none;
+    /* color: #dee2e6; */
+    color: #f5f5f5;
+    border-radius: 6px;
+}
+button.episodios:hover, a.episodios:hover {
+    background-color: #914e22;
+    border: none;
+    transition: 0.9s;
+    /* color: #bdc3c9; */
+    color: #bdc3c9;
 }
 
-.table th {
-    color: rgb(219, 219, 219);
+.jumbotron.episodios {
+    background-color: #f5cbb2;
+    border: none;
 }
-
-.table th a {
-    display: inline-flex;
-    text-decoration: none;
-    color: rgb(219, 219, 219);
-}
-
-.table th a:hover {
-    color: #9ea0a3;
-}
-
-.dataTables_scrollBody #datatable #automation-table tr {
-    line-height: 1.5 !important;
-}
-
-.w-90 {
-    max-width: 90%;
-}
-
-.width-150 {
-    width: 150px;
-}
-
-.max-width-150 {
-    max-width: 150px;
-}
-
-.min-width-150 {
-    min-width: 150px;
-}
-
-.min-width-100 {
-    min-width: 100px;
-}
-
-.invalid-feedback {
-    display: block !important;
-    width: 100%;
-    margin-top: .25rem;
-    font-size: .75rem;
-    color: #f1556c;
-}
-
-.dataTables_filter {
-    float: left !important;
-    /* display: none; */
- }
-
-/* components.maquinas ------------------------------*/
-@media(min-width: 1442px){
-    #cards-set-embarcado {
-        max-width: 30% !important;
-    }
-    #serviceList {
-        min-width: 70% !important;
-    }
-    .cards-set {
-        display: inline-block;
-        width: 100%;
-    }
-}
-.card-span {
-    display: flex;
-}
-.card-p {
-    width: 105px;
-    /* text-align: right; */
-}
-
-
-/* Datatable-----------------------------------------*/
-.table {
-    width: 100%!important;
-}
-
-.table td{
-    padding: 0.1rem;
-    vertical-align: middle;
-}
-
-
-/* Botão dentro de TD de Table */
-.btn-group-sm > .btn, .btn-sm {
-    margin: 0.1rem;
-    padding: .20rem .6rem;
-    font-size: .875rem;
-    line-height: 1.2;
-    border-radius: .15rem;
-}
-
-.dataTables_scrollBody #datatable #automation-table tr {
-    line-height: 2.8rem;
-}
-
-
-/* Select2 ------------------------------------------*/
-.select2 {
-    width: 100%!important;
-}
-
-/* Atendimento ---------------------------------------*/
-#service-activity {
-    height: auto;
-    /* height: 100%; */
-}
-
-
-/* Cores   -------------------------------------------*/
-.bg-info-dark {
-    background-color: #3f9eb4;
-}
-
-.bg-warning-dark {
-    background-color: #DB70DB;
-}
-
-/* Show Maquina Timeline -----------------------------*/
-#headingOne span,  #headingOne a{
-    font-size: 13px;
-}
-
-/* Botões --------------------------------------------*/
-#showServiceIndexInMachineShow, #createServiceFormInMachineShow, #removeServiceFormFromMachineShow {
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-.filter-button {
-    width: 150px;
-}
+/* episodios - end */
