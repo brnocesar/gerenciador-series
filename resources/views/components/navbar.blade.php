@@ -48,7 +48,7 @@
                     @guest
                     <li class="nav-item dropdown">
                         <span>
-                            <a class="navi-link btn btn-light mb-2 mr-2" href="{{ route('pagina_registro') }}">
+                            <a class="navi-link btn btn-light mb-2 mr-2 form-register" href="{{ route('pagina_registro') }}">
                                 <i class="fas fa-user-plus mr-2"></i>Criar usuário
                             </a>
                             <a class="navi-link btn btn-success mb-2 mr-2 form-auth" href="{{ route('pagina_login') }}">

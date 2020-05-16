@@ -20,6 +20,7 @@
 
             <div class="jumbotron
                 @if ( $_SERVER['PATH_INFO'] == '/entrar' ) form-auth @endif
+                @if ( $_SERVER['PATH_INFO'] == '/registrar' ) form-register @endif
             ">
                 <h1>@yield('cabecalho')</h1>
             </div>

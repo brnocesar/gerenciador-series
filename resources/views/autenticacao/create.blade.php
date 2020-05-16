@@ -8,28 +8,33 @@ Criar usuário
 
 @include('components.flash-message')
 
-<div class="container col-6 justify-content-center">
+<div class="container col-md-6 col-lg-6 justify-content-center">
 
     <form method="POST">
         @csrf
 
         <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" required class="form-control">
+            <label class="form-register" for="name">Nome</label>
+            <input type="text" name="name" id="name" required class="form-control form-register">
         </div>
 
         <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required class="form-control">
+            <label class="form-register" for="email">E-mail</label>
+            <input type="email" name="email" id="email" required class="form-control form-register">
         </div>
 
         <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" required min="1" class="form-control">
+            <label class="form-register" for="password">Senha</label>
+            <input type="password" name="password" id="password" required min="1" class="form-control form-register">
+        </div>
+
+        <div class="form-group">
+            <label class="form-register" for="confirm-password">Confirme senha</label>
+            <input type="password" name="confirm-password" id="confirm-password" required min="1" class="form-control form-register">
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mb-2 mr-2">
+            <button type="submit" class="btn btn-primary mt-3 form-register">
                 <i class="fas fa-user-plus mr-2"></i>Criar usuário
             </button>
         </div>
