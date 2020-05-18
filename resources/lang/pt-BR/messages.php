@@ -7,4 +7,9 @@ return [
     'min_password_length'           => 'A senha deve ter ao menos ',
     'missing_fields'                => 'Alguns campos são obrigatórios.',
     'should_be_an_email'            => 'Este campo deve ser um E-mail',
+    
+    'danger'                        => ['content' => "Conteúdo da mensagem de perigo.", 'status' => "danger"],
+    'info'                          => ['content' => "Conteúdo da mensagem de informação.", 'status' => "info"],
+    'success'                       => ['content' => "Conteúdo da mensagem de sucesso.", 'status' => "success"],
+    'warning'                       => ['content' => "Conteúdo da mensagem de aviso.", 'status' => "warning"],
 ];

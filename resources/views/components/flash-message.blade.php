@@ -1,7 +1,9 @@
-@if ( !empty($mensagem) )
-    <div class="alert alert-success">
-        {{$mensagem}}
-    </div>
+@if ( !empty($flash_message) )
+    @foreach ($flash_message as $message)
+        <div class="flash-message flash-message-{{$message['status']}}">
+            <strong>{{ ucfirst($message['status']) }}</strong> - {{ $message['content'] }}
+        </div>
+    @endforeach
 @endif
 
 @if ($errors->any())

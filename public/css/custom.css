@@ -27,14 +27,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button, a.btn {
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 
 button.back-btn, a.back-btn {
     background-color: #abbfcf;
     border: none;
     color: #303c41;
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 
 .bg-primary {
@@ -48,6 +48,7 @@ button.back-btn, a.back-btn {
 .jumbotron {
     background-color: #f1e3fd;
     padding: 3rem 3rem 1rem 2rem;
+    border-radius: 0.5rem; 
     border: none;
 }
 
@@ -90,7 +91,7 @@ button.series, a.series {
     background-color: #cf81a5;
     border: none;
     color: #dee2e6;
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 button.series:hover, a.series:hover {
     background-color: #a35579;
@@ -176,7 +177,7 @@ button.form-auth, a.form-auth {
     background-color: #50b160;
     border: none;
     color: #dee2e6;
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 button.form-auth:hover, a.form-auth:hover {
     background-color: #429b51;
@@ -215,7 +216,7 @@ button.form-register, a.form-register {
     background-color: #bdb35a;
     border: none;
     color: #2a2a2b;
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 button.form-register:hover, a.form-register:hover {
     background-color: #b1a750;
@@ -271,7 +272,7 @@ button.episodios, a.episodios {
     border: none;
     /* color: #dee2e6; */
     color: #f5f5f5;
-    border-radius: 6px;
+    border-radius: 0.5rem;
 }
 button.episodios:hover, a.episodios:hover {
     background-color: #914e22;
@@ -286,3 +287,33 @@ button.episodios:hover, a.episodios:hover {
     border: none;
 }
 /* episodios - end */
+
+/* flash messages - begin */
+.flash-message {
+    position: relative;
+    padding: 0.4rem 1.25rem;
+    margin-bottom: 5px;
+    background-color: #262f33;
+    border: none;
+    border-radius: 0.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.flash-message-danger {
+    color: #dd4747;
+}
+
+.flash-message-info {
+    color: #46adcc;
+}
+
+.flash-message-success {
+    color: #46cc58;
+}
+
+.flash-message-warning {
+    color: #c5b736;
+}
+/* flash messages - end */
