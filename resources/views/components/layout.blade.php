@@ -17,8 +17,6 @@
     <body>
         @include('components.navbar')
 
-        {{-- @dd($_SERVER['PATH_INFO']) --}}
-
         <div class="container">
 
             <div class="jumbotron

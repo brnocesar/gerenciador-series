@@ -10,12 +10,12 @@
             <ul class="container navbar-nav mr-auto">
                 <span class="navbar-cont">
                     <li class="nav-item 
-                        @if ( $_SERVER['PATH_INFO'] == '/' ) active @endif
+                        @if ( $_SERVER['REQUEST_URI'] == '/' ) active @endif
                     ">
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item 
-                        @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' ) active @endif
+                        @if ( explode('/', $_SERVER['REQUEST_URI'])[1] == 'series' ) active @endif
                     ">
                         <a class="nav-link" href="{{ route('listar_series') }}">Séries</a>
                     </li>
