@@ -43,7 +43,7 @@
                             <strong>{{ Auth::user()->name }}</strong>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
-                            <a class="dropdown-item disabled" href="#">Conta</a>
+                            <a class="dropdown-item" href="{{ route('minha_conta') }}">Conta</a>
                             <div class="dropdown-divider"></div>
                             <a class="{{-- dropdown-item --}} navi-link btn btn-danger" href="{{ route('deslogar') }}">
                                 <i class="fas fa-sign-out-alt mr-2"></i>Sair

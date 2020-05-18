@@ -13,9 +13,7 @@
 
 use App\User;
 
-Route::get('/', function (){
-    return redirect()->route('listar_series');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/series', 'SeriesController@index')->name('listar_series');
 Route::get('/series/criar', 'SeriesController@create')->name('adicionar_serie')->middleware('autenticador');
@@ -36,11 +34,15 @@ Route::get('/registrar', 'AutenticacaoController@create')->name('pagina_registro
 Route::post('/registrar', 'AutenticacaoController@store')->name('realizar_registro');
 Route::get('/sair', 'AutenticacaoController@sair')->name('deslogar');
 
-Route::get('/secret-script/make-admin', function(){
-    if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {
-        $admin->update(['admin' => true]);
-        echo "Admin encontrado!";
-    }
-    echo "Nada mais para ver aqui.";
-    die();
-}); // para heroku
+Route::get('/account', function () {
+    return view('account.index');
+})->name('minha_conta');
+
+// Route::get('/secret-script/make-admin', function(){
+//     if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {
+//         $admin->update(['admin' => true]);
+//         echo "Admin encontrado!";
+//     }
+//     echo "Nada mais para ver aqui.";
+//     die();
+// }); // para heroku
