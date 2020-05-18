@@ -1,6 +1,6 @@
 # sandbox-laravel-series
 
-:brazil: Ese projeto começou como "fork" de um projeto desenvolvido enquanto acompanhava o curso de Laravel da ALura.
+:brazil: Este projeto começou como "fork" de um projeto desenvolvido enquanto acompanhava o curso de Laravel da ALura.
 :uk: This project started as a "fork" from a learning project made during a course about Laravel at Alura.
 
 Durante o curso foi desenvolvido um sistema para gerenciar as séries que o usuário estivesse acompanhando, dessa forma ele poderia separar em temporadas e marcar episódios que já assistiu .
@@ -8,6 +8,7 @@ Durante o curso foi desenvolvido um sistema para gerenciar as séries que o usu�
 Foi feito o _deploy_ da aplicação no Heroku e abaixo é possível acompanhar os passos necessários.
 The application was deployed into Heroku and below you can see my steps to do this.
 
+(*) A idéia é escrever o _readme_ em PT-BR e EN... isso vai ir aos poucos, mas vai (espero).
 
 ## How to deploy a Laravel application into Heroku
 
