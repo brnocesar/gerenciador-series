@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Autenticacao\StoreAutenticacaoRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,8 @@ class AutenticacaoController extends Controller
             return redirect()->back()->withErrors('Usuário e/ou senha incorretos');
         }
 
+        User::find(Auth::user()->id)->update(['last_login' => date(now())]);
+
         $request->session()->flash('mensagem', "Usuário " . Auth::user()->name . " logado");
         return redirect()->route('listar_series');
     }
@@ -35,10 +38,11 @@ class AutenticacaoController extends Controller
         return view('autenticacao.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreAutenticacaoRequest $request)
     {
         $credenciais = $request->except('_token');
         $credenciais['password'] = Hash::make($credenciais['password']);
+        $credenciais['last_login'] = date(now());
 
         $user = User::create($credenciais);
 

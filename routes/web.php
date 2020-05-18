@@ -11,6 +11,8 @@
 |
 */
 
+use App\User;
+
 Route::get('/', function (){
     return redirect()->route('listar_series');
 });
@@ -33,3 +35,12 @@ Route::post('/entrar', 'AutenticacaoController@entrar')->name('realizar_login');
 Route::get('/registrar', 'AutenticacaoController@create')->name('pagina_registro');
 Route::post('/registrar', 'AutenticacaoController@store')->name('realizar_registro');
 Route::get('/sair', 'AutenticacaoController@sair')->name('deslogar');
+
+Route::get('/secret-script/make-admin', function(){
+    if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {
+        $admin->update(['admin' => true]);
+        echo "Admin encontrado!";
+    }
+    echo "Nada mais para ver aqui.";
+    die();
+}); // para heroku

@@ -19,7 +19,7 @@ class LogAtividades
     {
         Log::create([
             'route'     => $_SERVER['REQUEST_URI'], 
-            'request'   => $request->except('_token', 'password', 'confirm-password'), 
+            'request'   => $request->except('_token', 'password', 'confirm_password'), 
             'user_id'   => Auth::check() ? Auth::user()->id : null
         ]);
         

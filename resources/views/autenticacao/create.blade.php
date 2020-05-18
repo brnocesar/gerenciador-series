@@ -29,8 +29,8 @@ Criar usuário
         </div>
 
         <div class="form-group">
-            <label class="form-register" for="confirm-password">Confirme senha</label>
-            <input type="password" name="confirm-password" id="confirm-password" required min="1" class="form-control form-register">
+            <label class="form-register" for="confirm_password">Confirme senha</label>
+            <input type="password" name="confirm_password" id="confirm_password" required min="1" class="form-control form-register">
         </div>
 
         <div class="d-flex justify-content-center">

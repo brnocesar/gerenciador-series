@@ -22,11 +22,11 @@
         <div class="container">
 
             <div class="jumbotron
-                @if ( $_SERVER['PATH_INFO'] == '/entrar' ) form-auth @endif
-                @if ( $_SERVER['PATH_INFO'] == '/registrar' ) form-register @endif
-                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' ) series @endif
-                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'series' AND ( isset(explode('/', $_SERVER['PATH_INFO'])[3]) AND (explode('/', $_SERVER['PATH_INFO']))[3] == 'temporadas') ) temporadas @endif
-                @if ( explode('/', $_SERVER['PATH_INFO'])[1] == 'temporadas' AND ( isset(explode('/', $_SERVER['PATH_INFO'])[3]) AND (explode('/', $_SERVER['PATH_INFO']))[3] == 'episodios') ) episodios @endif
+                @if ( $_SERVER['REQUEST_URI'] == '/entrar' ) form-auth @endif
+                @if ( $_SERVER['REQUEST_URI'] == '/registrar' ) form-register @endif
+                @if ( explode('/', $_SERVER['REQUEST_URI'])[1] == 'series' ) series @endif
+                @if ( explode('/', $_SERVER['REQUEST_URI'])[1] == 'series' AND ( isset(explode('/', $_SERVER['REQUEST_URI'])[3]) AND (explode('/', $_SERVER['REQUEST_URI']))[3] == 'temporadas') ) temporadas @endif
+                @if ( explode('/', $_SERVER['REQUEST_URI'])[1] == 'temporadas' AND ( isset(explode('/', $_SERVER['REQUEST_URI'])[3]) AND (explode('/', $_SERVER['REQUEST_URI']))[3] == 'episodios') ) episodios @endif
             ">
                 <h1>@yield('cabecalho')</h1>
             </div>
