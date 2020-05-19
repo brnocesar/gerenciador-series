@@ -6,9 +6,9 @@ Entrar
 
 @section('conteudo')
 
-@include('components.flash-message')
-
 <div class="container col-md-6 col-lg-6 justify-content-center">
+
+    @include('components.flash-message')
 
     <form method="POST">
         @csrf
