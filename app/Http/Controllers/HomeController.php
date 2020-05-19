@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\FlashMessages;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    use FlashMessages; 
+    
     public function index()
     {
-        $flash_message = [
-            trans('messages.danger'),
-            trans('messages.info'),
-            trans('messages.success'),
-            trans('messages.warning'),
-        ];
-        
-        return view('home', compact('flash_message'));
+        $flashMessage = $this->getMessages();
+
+        return view('home', compact('flashMessage'));
     }
 }

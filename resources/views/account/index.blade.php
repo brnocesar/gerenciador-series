@@ -6,7 +6,8 @@
 
 @section('conteudo')
 
-    @include('components.flash-message')
+    @include('components.messages.flash')
+    @include('components.messages.error')
 
     <div class="row">
         <div class="col-sm-4 col-lg-4 col-xl-4">

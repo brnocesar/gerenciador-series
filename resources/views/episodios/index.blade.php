@@ -6,7 +6,8 @@ Episódios da {{$temporada->numero}}<sup>a</sup> Temporada de <i>{{ $temporada->
 
 @section('conteudo')
 
-@include('components.flash-message')
+@include('components.messages.flash')
+@include('components.messages.error')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('listar_temporadas', $temporada->serie->id) }}" class="btn btn-dark mb-2 back-btn">

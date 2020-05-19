@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Episodio;
+use App\Helpers\FlashMessages;
 use App\Temporada;
 use Illuminate\Http\Request;
 
 class EpisodiosController extends Controller
 {
+    use FlashMessages; 
     public function index(Temporada $temporada, Request $request)
     {
         $mensagem = $request->session()->get('mensagem');
+        $flashMessage = $this->getMessages();
 
-        return view('episodios.index', compact('temporada', 'mensagem'));
+        return view('episodios.index', compact('temporada', 'flashMessage'));
     }
 
     public function assistir(Temporada $temporada, Request $request)
@@ -27,7 +30,7 @@ class EpisodiosController extends Controller
         $temporada->push();
 
         if ( $request->has('episodios') ) {
-            $request->session()->flash('mensagem', 'Episódios marcados como assistidos');
+            $this->flashMessage([trans('messages.episodes.watched_list_updated')]);
         }
 
         return redirect()->back();

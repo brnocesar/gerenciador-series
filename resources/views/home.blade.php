@@ -6,7 +6,7 @@
 
 @section('conteudo')
 
-@include('components.flash-message')
+@include('components.messages.flash')
 
 
 

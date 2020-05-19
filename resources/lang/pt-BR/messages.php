@@ -12,4 +12,20 @@ return [
     'info'                          => ['content' => "Conteúdo da mensagem de informação.", 'status' => "info"],
     'success'                       => ['content' => "Conteúdo da mensagem de sucesso.", 'status' => "success"],
     'warning'                       => ['content' => "Conteúdo da mensagem de aviso.", 'status' => "warning"],
+
+    'authentication' => [
+        'user_already_logged'       => ['content' => "Usuário ja está logado!", 'status' => "success"],
+        'session_closed'            => ['content' => "Sessão encerrada!", 'status' => "success"],
+        'success_login'             => ['content' => "Login realizado!", 'status' => "success"],
+        'user_created'              => ['content' => "Usuário registrado!", 'status' => "success"],
+    ],
+
+    'episodes' => [
+        'watched_list_updated'      => ['content' => "A lista de episódios assistidos foi atualizada!", 'status' => "success"],
+    ],
+
+    'series' => [
+        'serie_created'             => ['content' => "Série adicionada com sucesso!", 'status' => "success"],
+        'serie_removed'             => ['content' => "Série removida com sucesso!", 'status' => "success"],
+    ],
 ];

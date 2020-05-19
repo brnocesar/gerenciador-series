@@ -6,7 +6,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
 
 @section('conteudo')
 
-@include('components.flash-message')
+@include('components.messages.flash')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2 back-btn">

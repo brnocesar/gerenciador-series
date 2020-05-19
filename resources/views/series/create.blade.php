@@ -6,7 +6,8 @@ Adicionar Série
 
 @section('conteudo')
 
-@include('components.flash-message')
+@include('components.messages.flash')
+@include('components.messages.error')
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2 back-btn">

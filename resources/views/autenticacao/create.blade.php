@@ -6,7 +6,8 @@ Criar usuário
 
 @section('conteudo')
 
-@include('components.flash-message')
+@include('components.messages.flash')
+@include('components.messages.error')
 
 <div class="container col-md-6 col-lg-6 justify-content-center">
 

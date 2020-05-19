@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\FlashMessages;
 use App\Http\Requests\Autenticacao\StoreAutenticacaoRequest;
 use App\User;
 use Illuminate\Http\Request;
@@ -10,17 +11,21 @@ use Illuminate\Support\Facades\Hash;
 
 class AutenticacaoController extends Controller
 {
+    use FlashMessages;
+
     public function index()
     {
-        return view('autenticacao.index');
+        $flashMessage = $this->getMessages();
+
+        return view('autenticacao.index', compact('flashMessage'));
     }
 
     public function entrar(Request $request)
     {
         if ( Auth::check() ) {
 
-            $request->session()->flash('mensagem', "Usuário " . Auth::user()->name . " já está logado");
-            return redirect()->route('listar_series');
+            $this->flashMessage([trans('messages.authentication.user_already_logged')]);
+            return redirect()->route('home');
         }
 
         if ( !Auth::attempt($request->only('email', 'password')) ) {
@@ -29,8 +34,8 @@ class AutenticacaoController extends Controller
 
         User::find(Auth::user()->id)->update(['last_login' => date(now())]);
 
-        $request->session()->flash('mensagem', "Usuário " . Auth::user()->name . " logado");
-        return redirect()->route('listar_series');
+        $this->flashMessage([trans('messages.authentication.success_login')]);
+        return redirect()->route('home');
     }
 
     public function create()
@@ -48,14 +53,15 @@ class AutenticacaoController extends Controller
 
         Auth::login($user);
 
-        $request->session()->flash('mensagem', "Usuário " . Auth::user()->name . " criado");
-        return redirect()->route('listar_series');
+        $this->flashMessage([trans('messages.authentication.user_created')]);
+        return redirect()->route('home');
     }
 
     public function sair(Request $request)
     {
         Auth::logout();
 
+        $this->flashMessage([trans('messages.authentication.session_closed')]);
         return redirect()->route('pagina_login');
     }
 }
