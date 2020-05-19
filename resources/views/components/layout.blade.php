@@ -29,6 +29,10 @@
 
         </div>
 
+        {{-- <footer class="footer">
+            Bruno Cesar | <a href="https://brnocesar.github.io/">brnocesar</a>
+        </footer> --}}
+
         @stack('body')
             <script src="/assets/js/vendor.min.js"></script>
     </body>

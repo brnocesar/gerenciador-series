@@ -34,9 +34,7 @@ Route::get('/registrar', 'AutenticacaoController@create')->name('pagina_registro
 Route::post('/registrar', 'AutenticacaoController@store')->name('realizar_registro');
 Route::get('/sair', 'AutenticacaoController@sair')->name('deslogar');
 
-Route::get('/account', function () {
-    return view('account.index');
-})->name('minha_conta');
+Route::get('/account', 'AccountController@index')->name('minha_conta');
 
 // Route::get('/secret-script/make-admin', function(){
 //     if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {

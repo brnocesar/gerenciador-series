@@ -13,8 +13,13 @@ class Log extends Model
         'request' => 'object'
     ];
 
+    public function parameters(): array
+    {
+        return [];
+    }
+
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }
