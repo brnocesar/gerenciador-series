@@ -15,28 +15,37 @@ Episódios da {{$temporada->numero}}<sup>a</sup> Temporada de <i>{{ $temporada->
     </a>
 </div>
 
-<form method="POST" action="{{ route('assistir_episodios', $temporada->id) }}">
-    @csrf
-
-    <ul class="list-group">
-
+<table class="table dt-responsive nowrap bstable">
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-left">Título</th>
+            <th class="text-center">Assistido</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach ($temporada->episodios as $episodio)
-            <li class="list-group-item d-flex justify-content-between align-items-center episodios">
-                Episódio {{ $episodio->numero }}
-                <input type="checkbox" name="episodios[]" value="{{ $episodio->id }}" {{ $episodio->assistido ? 'checked' : '' }}>
-            </li>
+            <tr>
+                <td class="text-center"> {{$episodio->numero}} </td>
+                <td class="text-left">-</td>
+                <td class="text-center">
+                    @auth
+                        @if ($episodio->assistido)
+                            <i class="fas fa-check-circle"></i>
+                        @else
+                            <a href="{{ route('episode.action.watch', $episodio->id) }}" class="btn btn-primary mt-2 mb-2 episodios">
+                                <i class="fas fa-check-circle"></i>
+                            </a>
+                        @endif
+                    @endauth
+                    
+                    @guest
+                        
+                    @endguest
+                </td>
+            </tr>
         @endforeach
-
-    </ul>
-
-    <div class="d-flex justify-content-end mt-2 mb-3">
-        @auth
-        <button class="btn btn-primary mt-2 mb-2 episodios">
-            <i class="fas fa-save mr-2"></i>Salvar
-        </button>
-        @endauth
-    </div>
-
-</form>
+    </tbody>
+</table>
 
 @endsection

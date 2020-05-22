@@ -22,4 +22,10 @@ trait FlashMessages
     {
         return $this->request->session()->get('flashMessage');
     }
+
+    public function notFound(string $model)
+    {
+        $this->flashMessage([trans('messages.'. $model .'.not_found')]);
+        return redirect()->back();
+    }
 }

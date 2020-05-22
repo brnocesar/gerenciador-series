@@ -390,6 +390,8 @@ class ComposerStaticInitb9db38fa9f0c05898e20d486ffaec1e8
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Episodio' => __DIR__ . '/../..' . '/app/Episodio.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Helpers\\FlashMessages' => __DIR__ . '/../..' . '/app/Helpers/FlashMessages.php',
+        'App\\Http\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccountController.php',
         'App\\Http\\Controllers\\AutenticacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/AutenticacaoController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

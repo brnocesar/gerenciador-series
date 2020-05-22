@@ -21,11 +21,18 @@ return [
     ],
 
     'episodes' => [
-        'watched_list_updated'      => ['content' => "A lista de episódios assistidos foi atualizada!", 'status' => "success"],
+        'not_found'                 => ['content' => "Episódio não encontrado!", 'status' => "danger"],
+        'watched_episode'           => ['content' => "Episódio assistido!", 'status' => "success"],
     ],
 
     'series' => [
+        'not_found'                 => ['content' => "Série não encontrada!", 'status' => "danger"],
         'serie_created'             => ['content' => "Série adicionada com sucesso!", 'status' => "success"],
+        'serie_removed'             => ['content' => "Série removida com sucesso!", 'status' => "success"],
+    ],
+
+    'temporadas' => [
+        'not_found'                 => ['content' => "Temporada não encontrada!", 'status' => "danger"],
         'serie_removed'             => ['content' => "Série removida com sucesso!", 'status' => "success"],
     ],
 ];

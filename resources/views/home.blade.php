@@ -8,7 +8,7 @@
 
 @include('components.messages.flash')
 
-
+@include('components.widgets.general-stats')
 
 <script>
     
