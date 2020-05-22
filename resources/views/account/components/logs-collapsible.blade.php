@@ -1,4 +1,4 @@
-<div class="card-box">
+<div class="card-box-without-shadow">
     <h3 class="text-white">Tabela de logs 2</h3>
     <div id="accordion" class="mb-3">
         @php
