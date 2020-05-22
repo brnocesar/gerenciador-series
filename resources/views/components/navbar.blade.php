@@ -23,7 +23,7 @@
                         <a class="nav-link" href="#">Filmes</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeste" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeste" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{--  data-reference="parent" --}}>
                             Teste
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownTeste">
@@ -42,7 +42,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <strong>{{ Auth::user()->name }}</strong>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
                             <a class="dropdown-item" href="{{ route('minha_conta') }}">Conta</a>
                             <div class="dropdown-divider"></div>
                             <a class="{{-- dropdown-item --}} navi-link btn btn-danger" href="{{ route('deslogar') }}">

@@ -7,7 +7,7 @@
                 <a href="{{ $href ?? '#' }}" role="button" aria-expanded="false"
                     aria-controls="cardCollpase{{ $cardID ?? '' }}" class="btn text-{{ $text ?? 'white'}}"
                 >
-                <i class="mdi mdi-pencil"></i> {{ $button ?? 'Editar' }}
+                <i class="mdi mdi-pencil"></i> {{ $button ?? '' }}
                 </a>
                 <a data-toggle="collapse" href="#cardCollpase{{ $cardID ?? '' }}" role="button" aria-expanded="false"
                     aria-controls="cardCollpase{{ $cardID ?? '' }}" class="text-{{ $text ?? 'white'}}">
@@ -20,14 +20,18 @@
             <div class="card-body">
 
                 @if ( isset($contents) )
-                    @foreach ($contents as $content)
-                        @if ( is_array($content) AND count($content) == 2 )
-                            <div class="card-span">
-                                <span class="text-muted font-13 card-p"><strong>{{ $content[0] }}</strong></span>
-                                <span>{{ $content[1] }}</span>
-                            </div>
-                        @endif
-                    @endforeach
+                    <table>
+                        <tbody>
+                            @foreach ($contents as $content)
+                                @if ( is_array($content) AND count($content) == 2 )
+                                    <tr>
+                                        <td class="text-left text-muted font-13 card-p"><strong>{{ $content[0] }}</strong></td>
+                                        <td class="text-left"><span>{{ $content[1] }}</span></td>
+                                    </tr>
+                                @endif
+                            @endforeach
+                        </tbody>
+                    </table>
                 @endif
                 
             </div>

@@ -45,4 +45,16 @@ class SeriesController extends Controller
 
         return redirect()->route('listar_series');
     }
+
+
+    public function newCreate(Request $request)
+    {
+        $flashMessage = $this->getMessages();
+
+        return view('series.new-create', compact('flashMessage'));
+    }
+
+    public function newStore(Request $request){
+        dd($request->all());
+    }
 }

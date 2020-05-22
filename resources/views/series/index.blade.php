@@ -11,6 +11,7 @@ Séries
 
 <div class="d-flex justify-content-end">
     <a href="{{ route('adicionar_serie') }}" class="btn btn-success mb-2 series"><i class="fas fa-plus mr-2"></i>Adicionar</a>
+    <a href="{{ route('serie.page.create') }}" class="btn btn-success mb-2 series ml-2"><i class="fas fa-plus mr-2"></i>(new)</a>
 </div>
 
 <ul class="list-group">

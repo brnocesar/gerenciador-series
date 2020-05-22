@@ -18,6 +18,8 @@ Route::get('/', 'HomeController@index');
 Route::get('/series', 'SeriesController@index')->name('listar_series');
 Route::get('/series/criar', 'SeriesController@create')->name('adicionar_serie')->middleware('autenticador');
 Route::post('/series/criar', 'SeriesController@store')->name('registra_serie')->middleware('autenticador');
+Route::get('/series/novo-criar', 'SeriesController@newCreate')->name('serie.page.create')->middleware('autenticador');
+Route::post('/series/novo-criar', 'SeriesController@newStore')->name('serie.action.store')->middleware('autenticador');
 Route::delete('/series/{id}', 'SeriesController@destroy')->name('deleta_serie')->middleware('autenticador');
 Route::post('/series/{id}/editar-nome', 'SeriesController@editarNome')->middleware('autenticador');
 
