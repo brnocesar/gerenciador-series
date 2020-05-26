@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="https://brnocesar.github.io/">brnocesar</a>
 
@@ -40,7 +40,7 @@
                     @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <strong>{{ Auth::user()->name }}</strong>
+                            <strong>{{ auth()->user()->name }}</strong>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
                             <a class="dropdown-item" href="{{ route('minha_conta') }}">Conta</a>

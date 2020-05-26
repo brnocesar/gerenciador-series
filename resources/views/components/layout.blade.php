@@ -10,6 +10,8 @@
         <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
         <link href="/css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/widgets.css" rel="stylesheet" type="text/css"/>
         @stack('css')
         <title>@yield('titulo')</title>
     </head>
@@ -17,7 +19,7 @@
     <body>
         @include('components.navbar')
 
-        <div class="container">
+        <main class="container" role="main">
 
             <div class="jumbotron
                 @include('components.jumbotron-style')
@@ -27,11 +29,9 @@
 
             @yield('conteudo')
 
-        </div>
+        </main>
 
-        {{-- <footer class="footer">
-            Bruno Cesar | <a href="https://brnocesar.github.io/">brnocesar</a>
-        </footer> --}}
+        @include('components.footer')
 
         @stack('body')
             <script src="/assets/js/vendor.min.js"></script>

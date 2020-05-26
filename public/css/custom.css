@@ -8,7 +8,7 @@ body {
     font-family: "Lucida Console", Courier, monospace;
     padding-top: 60px;
     color: #1f2e35;
-    background: #303c41;
+    background: #303741;
 }
 
 ::-moz-selection {
@@ -35,14 +35,6 @@ button.back-btn, a.back-btn {
     border: none;
     color: #303c41;
     border-radius: 0.5rem;
-}
-
-.bg-primary {
-    background-color: #abbfcf !important;
-    border-top-width: 5px;
-    border-style: none none solid none;
-    border-image-source: linear-gradient( 180deg, #303841, #303841 ) !important;
-    border-image-slice: 1;
 }
 
 .jumbotron {
@@ -293,7 +285,7 @@ button.episodios:hover, a.episodios:hover {
     position: relative;
     padding: 0.4rem 1.25rem;
     margin-bottom: 5px;
-    background-color: #262f33;
+    background-color: none;
     border: none;
     border-radius: 0.5rem;
     width: -webkit-fit-content;
@@ -317,89 +309,3 @@ button.episodios:hover, a.episodios:hover {
     color: #c5b736;
 }
 /* flash messages - end */
-
-
-/* home widget - begin */
-.avatar-widget {
-    height: 4rem;
-    width: 4rem; 
-}
-
-.card-box-without-shadow {
-    background-color: #36404a;
-    padding: 1.5rem;
-    /* -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
-            box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03); */
-    margin-bottom: 24px;
-    border-radius: 0.25rem; 
-}
-
-.avatar-title {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%; 
-}
-
-@media (min-width: 1200px) {
-    .corner-box-border-1 {
-        border-radius: 2rem 0 0 2rem;
-    }
-    
-    .corner-box-border-2 {
-        border-radius: 0 0 0 0;
-    }
-    
-    .corner-box-border-3 {
-        border-radius: 0 0 0 0;
-    }
-    
-    .corner-box-border-4 {
-        border-radius: 0 2rem 2rem 0;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .corner-box-border-1 {
-        border-radius: 2rem 0 0 0;
-    }
-    
-    .corner-box-border-2 {
-        border-radius: 0 2rem 0 0;
-    }
-    
-    .corner-box-border-3 {
-        border-radius: 0 0 0 2rem;
-    }
-    
-    .corner-box-border-4 {
-        border-radius: 0 0 2rem 0;
-    }
-}
-
-@media (max-width: 767px) {
-    .corner-box-border-1 {
-        border-radius: 2rem 2rem 0 0;
-    }
-    
-    .corner-box-border-2 {
-        border-radius: 0 0 0 0;
-    }
-    
-    .corner-box-border-3 {
-        border-radius: 0 0 0 0;
-    }
-    
-    .corner-box-border-4 {
-        border-radius: 0 0 2rem 2rem;
-    }
-}
-/* home widget - begin */
