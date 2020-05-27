@@ -38,6 +38,8 @@ Route::post('/registrar', 'AutenticacaoController@store')->name('realizar_regist
 Route::get('/sair', 'AutenticacaoController@sair')->name('deslogar');
 
 Route::get('/account', 'AccountController@index')->name('minha_conta');
+Route::get('/account/logs', 'LogController@index')->name('listar_logs_user');
+Route::get('/account/logs/all', 'LogController@all')->name('listar_logs_todos');
 
 // Route::get('/secret-script/make-admin', function(){
 //     if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {

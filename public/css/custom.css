@@ -309,3 +309,21 @@ button.episodios:hover, a.episodios:hover {
     color: #c5b736;
 }
 /* flash messages - end */
+
+.table-card {
+    width: 100%;
+    height: 100%;
+    border: 7px solid transparent;
+}
+tr:nth-child(even).log-row {
+    background: #12687235;
+}
+tr:nth-child(odd).log-row {
+    background: #18C29C35;
+}
+.td-date {
+    color: #7ed0da;
+}
+.td-action {
+    color: rgb(173, 216, 207);
+}
