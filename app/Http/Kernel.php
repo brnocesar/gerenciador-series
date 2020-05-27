@@ -23,7 +23,6 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *use App\Http\Middleware\Autenticador;
      * @var array
      */
     protected $middlewareGroups = [
