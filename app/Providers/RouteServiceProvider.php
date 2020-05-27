@@ -75,31 +75,31 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapAccountRoutes()
     {
         Route::prefix('account')
-            ->middleware('web')
+            ->middleware(['web', 'autenticador'])
             ->namespace($this->namespace)
-            ->group(base_path('routes/application/account.php'));
+            ->group(base_path('routes/authenticated/account.php'));
     }
 
     protected function mapAdminRoutes()
     {
         Route::prefix('with-great-power-comes-great-responsibility')
-            ->middleware('web')
+            ->middleware(['web', 'autenticador'])
             ->namespace($this->namespace)
-            ->group(base_path('routes/application/admin.php'));
+            ->group(base_path('routes/authenticated/admin.php'));
     }
 
     protected function mapAuthenticationRoutes()
     {
         Route::middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('routes/application/authentication.php'));
+            ->group(base_path('routes/authenticated/authentication.php'));
     }
 
     protected function mapSeriesRoutes()
     {
         Route::prefix('series')
-            ->middleware('web')
+            ->middleware(['web', 'autenticador'])
             ->namespace($this->namespace)
-            ->group(base_path('routes/application/series.php'));
+            ->group(base_path('routes/authenticated/series.php'));
     }
 }

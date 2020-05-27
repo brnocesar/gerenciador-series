@@ -16,6 +16,10 @@ use App\User;
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/series', 'SeriesController@index')->name('listar_series');
+Route::get('/series/{serieId}/temporadas', 'TemporadasController@index')->name('listar_temporadas');
+Route::get('temporadas/{temporada}/episodios', 'EpisodiosController@index')->name('listar_episodios');
+
 // Route::get('/secret-script/make-admin', function(){
 //     if ( $admin = User::where([ ['email', '=', 'bruno@bruno.com'], ['admin', '=', false] ])->first() ) {
 //         $admin->update(['admin' => true]);
@@ -25,7 +29,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 //     die();
 // }); // para heroku
 
-Route::get('/series/{serieId}/temporadas', 'TemporadasController@index')->name('listar_temporadas');
-Route::get('temporadas/{temporada}/episodios', 'EpisodiosController@index')->name('listar_episodios');
 Route::post('temporadas/{temporada}/episodios/assitir', 'EpisodiosController@assistir')->name('assistir_episodios')->middleware('autenticador');
 Route::get('episodios/{episodio_id}/assitir', 'EpisodiosController@watchEpisode')->name('episode.action.watch')->middleware('autenticador');
