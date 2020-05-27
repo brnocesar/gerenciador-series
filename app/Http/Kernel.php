@@ -23,7 +23,6 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *use App\Http\Middleware\Autenticador;
      * @var array
      */
     protected $middlewareGroups = [
@@ -62,6 +61,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'autenticador' => \App\Http\Middleware\Autenticador::class,
+        'admin' => \App\Http\Middleware\Administrador::class,
     ];
 
     /**

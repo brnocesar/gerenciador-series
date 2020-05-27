@@ -25,7 +25,7 @@
                 'title' => 'Últimas ações', 
                 'text' => 'warning',
                 'href' => route('listar_logs_user'),
-                'contents' => $lastLogs
+                'contents' => $logs
             ])
             @include('components.collapsible-card', ['cardID' => '3', 'title' => 'Titulo 3', 'bg' => 'success', 'button' => 'Outro nome'])
 

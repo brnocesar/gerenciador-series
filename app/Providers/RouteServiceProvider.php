@@ -36,10 +36,11 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
         $this->mapWebRoutes();
-
-        //
+        $this->mapAccountRoutes();
+        $this->mapAdminRoutes();
+        $this->mapAuthenticationRoutes();
+        $this->mapSeriesRoutes();
     }
 
     /**
@@ -52,8 +53,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -66,8 +67,39 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapAccountRoutes()
+    {
+        Route::prefix('account')
+            ->middleware(['web', 'autenticador'])
+            ->namespace($this->namespace)
+            ->group(base_path('routes/authenticated/account.php'));
+    }
+
+    protected function mapAdminRoutes()
+    {
+        Route::prefix('with-great-power-comes-great-responsibility')
+            ->middleware(['web', 'autenticador', 'admin'])
+            ->namespace($this->namespace)
+            ->group(base_path('routes/authenticated/admin.php'));
+    }
+
+    protected function mapAuthenticationRoutes()
+    {
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/authenticated/authentication.php'));
+    }
+
+    protected function mapSeriesRoutes()
+    {
+        Route::prefix('series')
+            ->middleware(['web', 'autenticador'])
+            ->namespace($this->namespace)
+            ->group(base_path('routes/authenticated/series.php'));
     }
 }

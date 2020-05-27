@@ -14,7 +14,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($logs as $log)
+                    @foreach ($logsTemporarios as $log)
                         <tr>
                             <td class="text-center"> {{$log->id}} </td>
                             <td class="text-left">{{ $log->route }}</td>
@@ -34,6 +34,6 @@
     </div>
 
     <div id="pagination" class="pagination pagination-rounded justify-content-end mt-3 mb-4">
-        {{$logs->links( "pagination::bootstrap-4") }}
+        {{$logsTemporarios->links( "pagination::bootstrap-4") }}
     </div>
 </div>

@@ -13,6 +13,10 @@ return [
     'success'                       => ['content' => "Conteúdo da mensagem de sucesso.", 'status' => "success"],
     'warning'                       => ['content' => "Conteúdo da mensagem de aviso.", 'status' => "warning"],
 
+    'admin' => [
+        'you_are_not'               => ['content' => "Você não é um Super Admin!", 'status' => "warning"],
+    ],
+
     'authentication' => [
         'user_already_logged'       => ['content' => "Usuário ja está logado!", 'status' => "success"],
         'session_closed'            => ['content' => "Sessão encerrada!", 'status' => "success"],

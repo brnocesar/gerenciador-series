@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\FlashMessages;
 use App\Model\Log;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {
-    // receber quantidade do paginate
+    use FlashMessages;
+
     public function index()
     {
-        $user = auth()->user();
-        $lastLogs = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->take(15)->pluck('route', 'created_at')->toArray();
-        $logs = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->paginate(5);
+        $user         = auth()->user();
+        $logs         = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->take(15)->pluck('route', 'created_at')->toArray();
+        $flashMessage = $this->getMessages();
 
-        return view('account.index', compact('user', 'lastLogs', 'logs'));
+        $logsTemporarios         = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->paginate(5);
+
+        return view('account.index', compact('user', 'logs', 'logsTemporarios', 'flashMessage'));
     }
 
 
