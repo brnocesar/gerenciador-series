@@ -38,7 +38,7 @@ button.back-btn, a.back-btn {
 }
 
 .jumbotron {
-    background-color: #f1e3fd;
+    background-image: linear-gradient( 90deg, #18C29C, #88F9D4 );
     padding: 3rem 3rem 1rem 2rem;
     border-radius: 0.5rem; 
     border: none;
