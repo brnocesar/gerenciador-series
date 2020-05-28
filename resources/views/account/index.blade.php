@@ -27,7 +27,7 @@
                 'href' => route('listar_logs_user'),
                 'contents' => $logs
             ])
-            @include('components.collapsible-card', ['cardID' => '3', 'title' => 'Titulo 3', 'bg' => 'success', 'button' => 'Outro nome'])
+            {{-- @include('components.collapsible-card', ['cardID' => '3', 'title' => 'Titulo 3', 'bg' => 'success', 'button' => 'Outro nome']) --}}
 
         </div>
 

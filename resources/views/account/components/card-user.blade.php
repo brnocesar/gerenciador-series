@@ -11,8 +11,7 @@
                 </a>
                 <a data-toggle="collapse" href="#collapse{{ $cardID ?? '' }}" role="button" aria-expanded="false"
                     aria-controls="collapse{{ $cardID ?? '' }}" class="text-{{ $text ?? 'white'}}">
-                    {{-- <i class="fas fa-arrow-down"></i> --}}
-                    <i class="fas fa-arrow-up"></i>
+                    <i class="mdi mdi-window-minimize"></i>
                 </a>
             </span>
         </div>
