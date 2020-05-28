@@ -35,9 +35,13 @@ Criar usuário
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mt-3 form-register">
-                <i class="fas fa-user-plus mr-2"></i>Criar usuário
-            </button>
+            @include('components.button', [
+                'type'   => 'submit',
+                'color'  => 'form-register', 
+                'margin' => 'mt-3',
+                'icon'   => 'fas fa-user-plus', 
+                'label'  => 'Criar usuário'
+            ])
         </div>
     </form>
 

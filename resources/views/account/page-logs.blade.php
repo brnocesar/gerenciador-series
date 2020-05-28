@@ -7,12 +7,8 @@
 @section('conteudo')
 
     <div class="d-flex justify-content-end">
-        <a href="{{ route('listar_logs_todos') }}" class="btn btn-dark mb-2 mr-2 btn-sm back-btn">
-            <i class="fas fa-plus mr-2"></i>Ver todos
-        </a>
-        <a href="{{ route('minha_conta') }}" class="btn btn-dark mb-2 btn-sm back-btn">
-            <i class="fas fa-backspace mr-2"></i>Voltar
-        </a>
+        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-plus', 'label' => 'Ver todos', 'href' => route('listar_logs_todos')])
+        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-arrow-left', 'label' => 'Voltar', 'href' => route('minha_conta')])
     </div>
 
     <div class="col-12">

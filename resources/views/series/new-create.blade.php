@@ -10,9 +10,13 @@
 @include('components.messages.error')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2 back-btn">
-        <i class="fas fa-backspace mr-2"></i>Voltar
-    </a>
+    @include('components.link-button', [
+        'href'   => route('listar_series'),
+        'color'  => 'back-btn', 
+        'margin' => 'mb-2', 
+        'icon'   => 'fas fa-arrow-left', 
+        'label'  => 'Voltar', 
+    ])
 </div>
 
 <form method="POST" action="{{ route('serie.action.store') }}">
@@ -43,9 +47,11 @@
     </div>
 
     <div class="d-flex justify-content-end mt-2">
-        <button class="btn btn-primary series">
-            <i class="fas fa-save mr-2"></i>Registrar
-        </button>
+        @include('components.button', [
+            'color'  => 'series', 
+            'icon'   => 'fas fa-save', 
+            'label'  => 'Salvar'
+        ])
     </div>
 </form>
 

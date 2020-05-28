@@ -10,9 +10,13 @@ Episódios da {{$temporada->numero}}<sup>a</sup> Temporada de <i>{{ $temporada->
 @include('components.messages.error')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('listar_temporadas', $temporada->serie->id) }}" class="btn btn-dark mb-2 back-btn">
-        <i class="fas fa-backspace mr-2"></i>Voltar
-    </a>
+    @include('components.link-button', [
+        'href'   => route('listar_temporadas', $temporada->serie->id),
+        'color'  => 'back-btn', 
+        'margin' => 'mb-2', 
+        'icon'   => 'fas fa-arrow-left', 
+        'label'  => 'Voltar', 
+    ])
 </div>
 
 <table class="table dt-responsive nowrap bstable">

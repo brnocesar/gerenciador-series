@@ -37,6 +37,11 @@ button.back-btn, a.back-btn {
     border-radius: 0.5rem;
 }
 
+button.back-btn:hover, a.back-btn:hover {
+    background-color: rgb(159, 187, 177);
+    transition: 0.5s;
+}
+
 .jumbotron {
     background-image: linear-gradient( 90deg, #18C29C, #88F9D4 );
     padding: 3rem 3rem 1rem 2rem;

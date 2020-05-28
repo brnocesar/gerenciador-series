@@ -25,16 +25,24 @@ Entrar
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary mb-3 mt-3 form-auth">
-                <i class="fas fa-sign-in-alt mr-2"></i>Entrar
-            </button>
+            @include('components.button', [
+                'type'   => 'submit',
+                'color'  => 'form-auth', 
+                'margin' => 'mb-3 mt-3',
+                'icon'   => 'fas fa-sign-in-alt', 
+                'label'  => 'Entrar'
+            ])
         </div>
     </form>
 
     <div class="d-flex justify-content-center">
-        <a class="btn btn-dark mb-2 mt-2 form-register" href="{{ route('pagina_registro') }}">
-            <i class="fas fa-user-plus mr-2"></i>Criar usuário
-        </a>
+        @include('components.link-button', [
+            'href'   => route('pagina_registro'),
+            'color'  => 'form-register', 
+            'margin' => 'mb-2 mt-2', 
+            'icon'   => 'fas fa-user-plus', 
+            'label'  => 'Criar usuário', 
+        ])
     </div>
 
 </div>

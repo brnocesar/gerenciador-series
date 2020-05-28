@@ -9,9 +9,13 @@ Temporadas de <i>{{ $serie->nome }}</i>
 @include('components.messages.flash')
 
 <div class="d-flex justify-content-end">
-    <a href="{{ route('listar_series') }}" class="btn btn-dark mb-2 back-btn">
-        <i class="fas fa-backspace mr-2"></i>Voltar
-    </a>
+    @include('components.link-button', [
+        'href'   => route('listar_series'),
+        'color'  => 'back-btn', 
+        'margin' => 'mb-2', 
+        'icon'   => 'fas fa-arrow-left', 
+        'label'  => 'Voltar', 
+    ])
 </div>
 
 <ul class="list-group">
