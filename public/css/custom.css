@@ -26,6 +26,36 @@ h1, h2, h3, h4, h5, h6 {
     color: #283438;
 }
 
+/* flash messages - begin */
+.flash-message {
+    position: relative;
+    padding: 0.4rem 1.25rem;
+    margin-bottom: 5px;
+    background-color: none;
+    border: none;
+    border-radius: 0.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.flash-message-danger {
+    color: #dd4747;
+}
+
+.flash-message-info {
+    color: #46adcc;
+}
+
+.flash-message-success {
+    color: #46cc58;
+}
+
+.flash-message-warning {
+    color: #c5b736;
+}
+/* flash messages - end */
+
 button, a.btn {
     border-radius: 0.5rem;
 }
@@ -84,7 +114,8 @@ button.default-button:hover, a.default-button:hover {
 button.form-auth, a.form-auth {
     background-image: linear-gradient( 90deg, #18C29C, rgb(3, 158, 145));
     border: none;
-    color: #91aa9a;
+    /* color: #91aa9a; */
+    color: #dee2e6;
     border-radius: 0.5rem;
 }
 button.form-auth:hover, a.form-auth:hover {
@@ -94,11 +125,13 @@ button.form-auth:hover, a.form-auth:hover {
     color: #dee2e6;
 }
 
+
+
 /* series - index */
 .list-group-item.series {
-    background-color: #f8dce9;
+    background-color: none;
     border: 1px solid #cf81a5;
-    color: #410320;
+    color: #18C29C;
 }
 
 .list-group-item.series > a {
@@ -170,10 +203,10 @@ input[type=number]
 .quantity-button {
     cursor: pointer;
     height: 10px;
-    border-left: 1px solid #cf81a5;
+    border-left: 1px solid #18C29C;
     width: 20px;
     text-align: center;
-    color: #cf81a5;
+    color: #18C29C;
     font-size: 10px;
     font-family: "Trebuchet MS", Helvetica, sans-serif !important;
     -webkit-transform: translateX(-100%);
@@ -184,7 +217,7 @@ input[type=number]
     position: absolute;
     height: 40%;
     top: 2px;
-    border-bottom: 1px solid #cf81a5;
+    border-bottom: 1px solid #18C29C;
 }
 
 .quantity-button.arrows-down {
@@ -194,67 +227,6 @@ input[type=number]
 }
 /* input number spinners - end */
 /* series create - end */
-
-/* login - begin */
-
-
-button.form-auth, a.form-auth {
-    background-color: #50b160;
-    border: none;
-    color: #dee2e6;
-    border-radius: 0.5rem;
-}
-button.form-auth:hover, a.form-auth:hover {
-    background-color: #429b51;
-    border: none;
-    transition: 0.9s;
-    color: #dee2e6;
-}
-
-.jumbotron.form-auth {
-    background-color: #bce4c3;
-    border: none;
-}
-/* login - end */
-
-/* register - begin */
-.form-group > input.form-register {
-    background-color: #303c41;
-    border: 1px solid #a19136;
-    color: #dfd5a7;
-    border-radius: .3rem;
-}
-.form-group > input.form-register:focus {
-    background-color: #262f33;
-    border: 1px solid #a19136;
-    color: #dfd5a7;
-    border-radius: .3rem;
-}
-
-.form-group > label.form-register {
-    font-weight: 600;
-    margin-bottom: .1rem;
-    color: #b1a750;
-}
-
-button.form-register, a.form-register {
-    background-color: #bdb35a;
-    border: none;
-    color: #2a2a2b;
-    border-radius: 0.5rem;
-}
-button.form-register:hover, a.form-register:hover {
-    background-color: #b1a750;
-    border: none;
-    transition: 0.9s;
-    color: #2a2a2b;
-}
-
-.jumbotron.form-register {
-    background-color: #e4ddbc;
-    border: none;
-}
-/* register - end */
 
 /* temporadas - begin */
 .list-group-item.temporadas {
@@ -313,35 +285,7 @@ button.episodios:hover, a.episodios:hover {
 }
 /* episodios - end */
 
-/* flash messages - begin */
-.flash-message {
-    position: relative;
-    padding: 0.4rem 1.25rem;
-    margin-bottom: 5px;
-    background-color: none;
-    border: none;
-    border-radius: 0.5rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-}
 
-.flash-message-danger {
-    color: #dd4747;
-}
-
-.flash-message-info {
-    color: #46adcc;
-}
-
-.flash-message-success {
-    color: #46cc58;
-}
-
-.flash-message-warning {
-    color: #c5b736;
-}
-/* flash messages - end */
 
 .table-card {
     width: 100%;

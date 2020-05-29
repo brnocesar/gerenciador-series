@@ -2,9 +2,9 @@
     <div class="card">
         <div class="card-header bg-{{ $bg ?? 'secondary'}}  text-bg-warning d-flex justify-content-between align-items-center">
 
-            <h5 class="text-warning">{{$title}}</h5>
+            <h5 class="text-warning">Últimas ações</h5>
             <span>
-                <a href="{{ $href ?? '#' }}" role="button" aria-expanded="false"
+                <a href="{{ route('listar_logs_user') }}" role="button" aria-expanded="false"
                     aria-controls="collapse{{ $cardID ?? '' }}" class="btn text-warning"
                 >
                 Ver todas
@@ -30,7 +30,7 @@
                         <tbody>
                             @foreach ($content as $key => $value)
                                 <tr class="log-row">
-                                    <td class="text-center font-13 card-p td-date">{{ $key }}</td>
+                                    <td class="text-center card-p td-date">{{ $key }}</td>
                                     <td class="text-left td-action"><span>{{ $value }}</span></td>
                                 </tr>
                             @endforeach

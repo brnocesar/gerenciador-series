@@ -29,8 +29,8 @@
             @include('components.form-input', ['type' => 'number', 'min' => 1, 'max' => 50, 'col' => 'col-6', 'required' => 'true', 'name' => 'qtd_temporadas', 'label' => 'Temporadas'])
             
             <div class="form-group col-6 quantity">
-                <label class="series" for="ep_por_temporada">Ep. / temporada</label>
-                <input type="number" id="ep_por_temporada" name="ep_por_temporada" min="1" max="50" class="form-control series">
+                <label class="default-input" for="ep_por_temporada">Ep. / temporada</label>
+                <input type="number" id="ep_por_temporada" name="ep_por_temporada" min="1" max="50" class="form-control default-input">
                 <div class="arrows-qtd">
                     <div class="quantity-button arrows-up" onclick="btnUp()">
                         <i class="fas fa-plus"></i>

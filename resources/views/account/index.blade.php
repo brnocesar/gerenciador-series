@@ -12,15 +12,9 @@
     <div class="row">
         <div class="col-sm-4 col-lg-4 col-xl-4">
 
-            @include('account.components.card-user', ['cardID' => '1'])
-            @include('account.components.card-logs', [
-                'cardID'  => '2', 
-                'title'   => 'Últimas ações', 
-                'text'    => 'warning',
-                'href'    => route('listar_logs_user'),
-                'content' => $logs
-            ])
-            {{-- @include('components.collapsible-card', ['cardID' => '3', 'title' => 'Titulo 3', 'bg' => 'success', 'button' => 'Outro nome']) --}}
+            @include('account.components.card-user',   ['cardID' => '1'])
+            @include('account.components.card-logs',   ['cardID' => '2', 'content' => $logs])
+            @include('account.components.card-config', ['cardID' => '3', 'text' => 'success'])
 
         </div>
 
