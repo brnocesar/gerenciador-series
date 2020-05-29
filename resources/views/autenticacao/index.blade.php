@@ -14,35 +14,16 @@ Entrar
     <form method="POST">
         @csrf
 
-        <div class="form-group">
-            <label class="form-auth" for="email">E-mail</label>
-            <input type="email" name="email" id="email" required class="form-control form-auth">
-        </div>
-
-        <div class="form-group">
-            <label class="form-auth" for="password">Senha</label>
-            <input type="password" name="password" id="password" required min="1" class="form-control form-auth">
-        </div>
+        @include('components.form-input', ['type' => 'text',     'required' => 'true', 'name' => 'email',    'label' => 'E-mail'])
+        @include('components.form-input', ['type' => 'password', 'required' => 'true', 'name' => 'password', 'label' => 'Antiga senha'])
 
         <div class="d-flex justify-content-center">
-            @include('components.button', [
-                'type'   => 'submit',
-                'color'  => 'form-auth', 
-                'margin' => 'mb-3 mt-3',
-                'icon'   => 'fas fa-sign-in-alt', 
-                'label'  => 'Entrar'
-            ])
+            @include('components.button', ['type' => 'submit', 'color' => 'form-auth', 'margin' => 'mb-3 mt-3', 'icon' => 'fas fa-sign-in-alt', 'label' => 'Entrar'])
         </div>
     </form>
 
     <div class="d-flex justify-content-center">
-        @include('components.link-button', [
-            'href'   => route('pagina_registro'),
-            'color'  => 'form-register', 
-            'margin' => 'mb-2 mt-2', 
-            'icon'   => 'fas fa-user-plus', 
-            'label'  => 'Criar usuário', 
-        ])
+        @include('components.link-button', ['href' => route('pagina_registro'), 'margin' => 'mb-2 mt-2', 'icon' => 'fas fa-user-plus', 'label' => 'Criar usuário'])
     </div>
 
 </div>

@@ -14,30 +14,14 @@ Criar usuário
     <form method="POST">
         @csrf
 
-        <div class="form-group">
-            <label class="form-register" for="name">Nome</label>
-            <input type="text" name="name" id="name" required class="form-control form-register">
-        </div>
-
-        <div class="form-group">
-            <label class="form-register" for="email">E-mail</label>
-            <input type="email" name="email" id="email" required class="form-control form-register">
-        </div>
-
-        <div class="form-group">
-            <label class="form-register" for="password">Senha</label>
-            <input type="password" name="password" id="password" required min="1" class="form-control form-register">
-        </div>
-
-        <div class="form-group">
-            <label class="form-register" for="confirm_password">Confirme senha</label>
-            <input type="password" name="confirm_password" id="confirm_password" required min="1" class="form-control form-register">
-        </div>
+        @include('components.form-input', ['type' => 'text',     'required' => 'true', 'name' => 'name',             'label' => 'Nome'])
+        @include('components.form-input', ['type' => 'text',     'required' => 'true', 'name' => 'email',            'label' => 'E-mail'])
+        @include('components.form-input', ['type' => 'password', 'required' => 'true', 'name' => 'password',         'label' => 'Senha'])
+        @include('components.form-input', ['type' => 'password', 'required' => 'true', 'name' => 'confirm_password', 'label' => 'Confirme senha'])
 
         <div class="d-flex justify-content-center">
             @include('components.button', [
                 'type'   => 'submit',
-                'color'  => 'form-register', 
                 'margin' => 'mt-3',
                 'icon'   => 'fas fa-user-plus', 
                 'label'  => 'Criar usuário'

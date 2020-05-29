@@ -19,7 +19,7 @@
         <div id="collapse{{ $cardID ?? '' }}" class="collapse {{ ($show ?? 'false') == 'true' ? 'show' : '' }}">
             <div class="card">
 
-                @if ( isset($contents) )
+                @if ( isset($content) )
                     <table class="table-card">
                         <thead>
                             <tr>
@@ -28,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($contents as $key => $value)
+                            @foreach ($content as $key => $value)
                                 <tr class="log-row">
                                     <td class="text-center font-13 card-p td-date">{{ $key }}</td>
                                     <td class="text-left td-action"><span>{{ $value }}</span></td>

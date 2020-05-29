@@ -42,11 +42,56 @@ button.back-btn:hover, a.back-btn:hover {
     transition: 0.5s;
 }
 
+input.default-input {
+    background-color: #303741;
+    border: 1px solid #18C29C;
+    color: #88F9D4;
+    border-radius: .3rem;
+}
+input.default-input:focus {
+    background-color: #262f33;
+    border: 1px solid #18C29C;
+    color: #88F9D4;
+    border-radius: .3rem;
+}
+
+label.default-input {
+    font-weight: 600;
+    margin-bottom: .1rem;
+    color: #18C29C;
+}
+
+button.default-button, a.default-button {
+    background-image: linear-gradient( 90deg, #126872, #0B877D);
+    border: none;
+    color: #d8f1ee;
+    border-radius: 0.5rem;
+}
+button.default-button:hover, a.default-button:hover {
+    background-image: linear-gradient( 90deg, #0f5961, rgb(8, 116, 107));
+    border: none;
+    transition: 0.5s;
+    color: #dddbdb;
+}
+
 .jumbotron {
     background-image: linear-gradient( 90deg, #18C29C, #88F9D4 );
     padding: 3rem 3rem 1rem 2rem;
     border-radius: 0.5rem; 
     border: none;
+}
+
+button.form-auth, a.form-auth {
+    background-image: linear-gradient( 90deg, #18C29C, rgb(3, 158, 145));
+    border: none;
+    color: #91aa9a;
+    border-radius: 0.5rem;
+}
+button.form-auth:hover, a.form-auth:hover {
+    background-image: linear-gradient( 90deg, rgb(15, 172, 138), rgb(3, 158, 145));
+    border: none;
+    transition: 0.5s;
+    color: #dee2e6;
 }
 
 /* series - index */
@@ -151,24 +196,7 @@ input[type=number]
 /* series create - end */
 
 /* login - begin */
-.form-group > input.form-auth {
-    background-color: #303c41;
-    border: 1px solid #36a148;
-    color: #ade9b8;
-    border-radius: .3rem;
-}
-.form-group > input.form-auth:focus {
-    background-color: #262f33;
-    border: 1px solid #36a148;
-    color: #ade9b8;
-    border-radius: .3rem;
-}
 
-.form-group > label.form-auth {
-    font-weight: 600;
-    margin-bottom: .1rem;
-    color: #50b160;
-}
 
 button.form-auth, a.form-auth {
     background-color: #50b160;

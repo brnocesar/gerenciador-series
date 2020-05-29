@@ -16,11 +16,14 @@ class AccountController extends Controller
         $logs         = Log::where('user_id', '=', auth()->user()->id)->orderBy('created_at', 'desc')->take(15)->pluck('route', 'created_at')->toArray();
         $flashMessage = $this->getMessages();
 
-        $logsTemporarios         = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->paginate(5);
+        $logsTemporarios = Log::where('id', '>', 0)->orderBy('created_at', 'desc')->paginate(5);
 
         return view('account.index', compact('user', 'logs', 'logsTemporarios', 'flashMessage'));
     }
 
 
-    
+    public function editPassword()
+    {
+        return view('account.edit-password', ['user' => auth()->user()]);
+    }
 }
