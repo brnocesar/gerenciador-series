@@ -23,6 +23,32 @@ span.navbar-guest {
     align-self: center;
 }
 
+.brand-profile-pic {
+    padding-right: 16px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.brand-circle {
+    background-color: none;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.brand-circle img {
+    width: 100%;
+    width:"50";
+    height:"50";
+}
+
+.brand-profile-pic > span{
+    padding-left: 10px;
+}
+
 @media (min-width: 992px) {
 }
 
