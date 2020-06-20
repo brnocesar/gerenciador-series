@@ -1,0 +1,142 @@
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    list-style: none;
+    padding: 16px 0 64px 0;
+}
+
+@media (max-width: 1199px) { .series-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }}
+@media (max-width: 991px) { .series-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }}
+@media (max-width: 767px) { .series-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }}
+@media (max-width: 500px) { .series-grid { grid-template-columns: repeat(1, 1fr); gap: 16px; }}
+
+.series-grid li {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1e4853;
+    width: 100%;
+    max-width: 950px;
+    border-radius: 8px;
+    padding: 10px 10px 0 10px;
+}
+
+.series-grid li img {
+    width: 100%;
+    max-height: 200px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 2px solid #18C29C50;
+    margin-bottom: 10px;
+}
+
+.series-grid li span {
+    color: #18C29C;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.series-grid li span h2 {
+    color: #18C29C;
+    font-size: 16px;
+}
+
+.series-grid li span h3 {
+    color: #18C29C;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.series-grid-buttons {
+    display: flex;
+    justify-content: end;
+    color: #18C29C;
+    font-size: 8px;
+    margin-bottom: 8px;
+}
+
+/* series create - begin */
+.form-group > input.series {
+    background-color: #303c41;
+    border: 1px solid #cf81a5;
+    color: #ffd0e6;
+    border-radius: .3rem;
+}
+.form-group > input.series:focus {
+    background-color: #262f33;
+    border: 1px solid #cf81a5;
+    color: #ffd0e6;
+    border-radius: .3rem;
+}
+
+.form-group > label.series {
+    font-weight: 600;
+    margin-bottom: .1rem;
+    color: #cf81a5;
+}
+
+button.series, a.series {
+    background-color: #cf81a5;
+    border: none;
+    color: #dee2e6;
+    border-radius: 0.5rem;
+}
+button.series:hover, a.series:hover {
+    background-color: #a35579;
+    border: none;
+    transition: 0.9s;
+    color: #bdc3c9;
+}
+
+.jumbotron.series {
+    background-color: #f8dce9;
+    border: none;
+}
+
+/* input number spinners - begin */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.arrows-qtd {
+    float: left;
+    position: relative;
+    height: 42px;
+}
+
+.quantity-button {
+    cursor: pointer;
+    height: 10px;
+    border-left: 1px solid #18C29C;
+    width: 20px;
+    text-align: center;
+    color: #18C29C;
+    font-size: 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.quantity-button.arrows-up {
+    position: absolute;
+    height: 40%;
+    top: 2px;
+    border-bottom: 1px solid #18C29C;
+}
+
+.quantity-button.arrows-down {
+    position: absolute;
+    bottom: 6px;
+    height: 40%;
+}
+/* input number spinners - end */

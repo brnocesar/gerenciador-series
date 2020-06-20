@@ -38,6 +38,8 @@ return [
     ],
 
     'series' => [
+        'added'                     => ['content' => "Série adicionada a sua lista.", 'status' => "success"],
+        'already_added'             => ['content' => "Série já está na sua lista.", 'status' => "warning"],
         'not_found'                 => ['content' => "Série não encontrada!", 'status' => "danger"],
         'serie_created'             => ['content' => "Série adicionada com sucesso!", 'status' => "success"],
         'serie_removed'             => ['content' => "Série removida com sucesso!", 'status' => "success"],

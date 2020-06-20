@@ -38,8 +38,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
     public function logs()
     {
         return $this->hasMany(Log::class);
+    }
+
+    public function series()
+    {
+        return $this->belongsToMany(Serie::class);
     }
 }

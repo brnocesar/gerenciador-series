@@ -12,6 +12,7 @@
         <link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
         <link href="/css/footer.css" rel="stylesheet" type="text/css"/>
         <link href="/css/widgets.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/series.css" rel="stylesheet" type="text/css"/>
         @stack('css')
         <title>@brnocesar</title>
     </head>

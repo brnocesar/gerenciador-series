@@ -104,6 +104,19 @@ button.default-button:hover, a.default-button:hover {
     color: #dddbdb;
 }
 
+button.default-button-danger, a.default-button-danger {
+    background-image: linear-gradient( 90deg, #d62f2f, #d43c3c);
+    border: none;
+    color: #d8f1ee;
+    border-radius: 0.5rem;
+}
+button.default-button-danger:hover, a.default-button-danger:hover {
+    background-image: linear-gradient( 90deg, #d62f2f, #d14d4d);
+    border: none;
+    transition: 0.5s;
+    color: #dddbdb;
+}
+
 .jumbotron {
     background-image: linear-gradient( 90deg, #18C29C, #88F9D4 );
     padding: 3rem 3rem 1rem 2rem;
@@ -125,6 +138,36 @@ button.form-auth:hover, a.form-auth:hover {
     color: #dee2e6;
 }
 
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #dee2e6;
+    background-color: #485561;
+    border: 1px solid #515f6d; 
+}
+.page-link:hover {
+    z-index: 2;
+    color: #dee2e6;
+    text-decoration: none;
+    background-color: #536270;
+    border-color: #576775; 
+}
+.page-link:focus {
+    z-index: 2;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.15rem rgb(15, 172, 138);
+            box-shadow: 0 0 0 0.15rem rgb(15, 172, 138); 
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: rgb(15, 172, 138);
+    border-color: rgb(15, 172, 138); 
+}
 
 
 /* series - index */
@@ -140,7 +183,7 @@ button.form-auth:hover, a.form-auth:hover {
     background: none;
     display: flex;
     flex-direction: column;
-    border: 2px solid #18C29C;
+    border: 2px solid #1e4853;
     width: 100%;
     max-width: 950px;
     border-radius: 8px;
@@ -155,117 +198,6 @@ button.form-auth:hover, a.form-auth:hover {
     border: 1px solid rgba(225, 225, 226, 0.5);
     margin-bottom: 10px;
 }
-
-.series-grid li span {
-    color: #18C29C;
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.series-grid li span h2 {
-    color: #18C29C;
-    font-size: 16px;
-}
-
-.series-grid li span h3 {
-    color: #18C29C;
-    font-size: 12px;
-    margin-top: 8px;
-}
-
-.series-grid-buttons {
-    display: flex;
-    justify-content: end;
-    color: #18C29C;
-    font-size: 8px;
-    margin-bottom: 8px;
-}
-
-/* series create - begin */
-.form-group > input.series {
-    background-color: #303c41;
-    border: 1px solid #cf81a5;
-    color: #ffd0e6;
-    border-radius: .3rem;
-}
-.form-group > input.series:focus {
-    background-color: #262f33;
-    border: 1px solid #cf81a5;
-    color: #ffd0e6;
-    border-radius: .3rem;
-}
-
-.form-group > label.series {
-    font-weight: 600;
-    margin-bottom: .1rem;
-    color: #cf81a5;
-}
-
-button.series, a.series {
-    background-color: #cf81a5;
-    border: none;
-    color: #dee2e6;
-    border-radius: 0.5rem;
-}
-button.series:hover, a.series:hover {
-    background-color: #a35579;
-    border: none;
-    transition: 0.9s;
-    color: #bdc3c9;
-}
-
-.jumbotron.series {
-    background-color: #f8dce9;
-    border: none;
-}
-
-/* input number spinners - begin */
-input[type=number]
-{
-    -moz-appearance: textfield;
-}
-
-.quantity input {
-    float: left;
-    display: block;
-    padding: 0;
-    margin: 0;
-    padding-left: 20px;
-}
-
-.arrows-qtd {
-    float: left;
-    position: relative;
-    height: 42px;
-}
-
-.quantity-button {
-    cursor: pointer;
-    height: 10px;
-    border-left: 1px solid #18C29C;
-    width: 20px;
-    text-align: center;
-    color: #18C29C;
-    font-size: 10px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-}
-
-.quantity-button.arrows-up {
-    position: absolute;
-    height: 40%;
-    top: 2px;
-    border-bottom: 1px solid #18C29C;
-}
-
-.quantity-button.arrows-down {
-    position: absolute;
-    bottom: 6px;
-    height: 40%;
-}
-/* input number spinners - end */
-/* series create - end */
 
 /* temporadas - begin */
 .list-group-item.temporadas {

@@ -10,7 +10,7 @@ Temporadas de <i>{{ $serie->nome }}</i>
 
 <div class="d-flex justify-content-end">
     @include('components.link-button', [
-        'href'   => route('listar_series'),
+        'href'   => route('series.page.index'),
         'color'  => 'back-btn', 
         'margin' => 'mb-2', 
         'icon'   => 'fas fa-arrow-left', 

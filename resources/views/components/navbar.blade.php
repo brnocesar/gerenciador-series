@@ -18,10 +18,17 @@
                     ">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item 
+                    <li class="nav-item dropdown
                         @if ( explode('/', $_SERVER['REQUEST_URI'])[1] == 'series' ) active @endif
                     ">
-                        <a class="nav-link" href="{{ route('listar_series') }}">Séries</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeries" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{--  data-reference="parent" --}}>
+                            Séries
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSeries">
+                            <a class="dropdown-item" href="{{ route('series.page.index') }}">Ver todas</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('series.page.minhas') }}">Minhas séries</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Filmes</a>

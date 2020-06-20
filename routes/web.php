@@ -16,7 +16,7 @@ use App\User;
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/series', 'SeriesController@index')->name('listar_series');
+Route::get('/series', 'SeriesController@index')->name('series.page.index');
 Route::get('/series/{serieId}/temporadas', 'TemporadasController@index')->name('listar_temporadas');
 Route::get('temporadas/{temporada}/episodios', 'EpisodiosController@index')->name('listar_episodios');
 
