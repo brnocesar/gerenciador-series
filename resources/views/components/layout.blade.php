@@ -13,7 +13,7 @@
         <link href="/css/footer.css" rel="stylesheet" type="text/css"/>
         <link href="/css/widgets.css" rel="stylesheet" type="text/css"/>
         @stack('css')
-        <title>@yield('titulo')</title>
+        <title>@brnocesar</title>
     </head>
 
     <body>

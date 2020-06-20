@@ -14,7 +14,7 @@
     </div>
 
     
-    <form method="POST">
+    <form method="POST" action="{{route('account.action.update-password')}}">
         @csrf
         
         <div class="row">
