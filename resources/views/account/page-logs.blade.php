@@ -8,7 +8,7 @@
 
     <div class="d-flex justify-content-end">
         @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-plus', 'label' => 'Ver todos', 'href' => route('listar_logs_todos')])
-        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-arrow-left', 'label' => 'Voltar', 'href' => route('minha_conta')])
+        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-arrow-left', 'label' => 'Voltar', 'href' => route('account.page.index')])
     </div>
 
     <div class="col-12">

@@ -10,7 +10,7 @@
     @include('components.messages.error')
 
     <div class="d-flex justify-content-end">
-        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-arrow-left', 'label' => 'Voltar', 'href' => route('minha_conta')])
+        @include('components.link-button', ['color' => 'back-btn', 'icon' => 'fas fa-arrow-left', 'label' => 'Voltar', 'href' => route('account.page.index')])
     </div>
 
     

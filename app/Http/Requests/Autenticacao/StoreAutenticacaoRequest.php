@@ -35,11 +35,11 @@ class StoreAutenticacaoRequest extends FormRequest
     public function messages()
     {
         return [
-            'required'  => trans('messages.missing_fields'),
-            'email'     => trans('messages.should_be_an_email'),
-            'email.unique'    => trans('messages.email_unique'),
-            'name.max'       => trans('messages.max_char') . '(:attribute, :max)',
-            'password.min'       => trans('messages.min_password_length') . ':min caracteres.',
+            'required'              => trans('messages.missing_fields'),
+            'email'                 => trans('messages.should_be_an_email'),
+            'email.unique'          => trans('messages.email_unique'),
+            'name.max'              => trans('messages.max_char') . '(:attribute, :max)',
+            'password.min'          => trans('messages.min_password_length') . ':min caracteres.',
             'confirm_password.same' => trans('messages.confirm_password'),
         ];
     }

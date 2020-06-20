@@ -22,7 +22,7 @@ class Administrador
 
             $this->flashMessage([trans('messages.admin.you_are_not')]);
             
-            return redirect()->route('minha_conta');
+            return redirect()->route('account.page.index');
         }
 
         return $next($request);

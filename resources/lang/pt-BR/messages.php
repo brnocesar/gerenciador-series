@@ -13,6 +13,13 @@ return [
     'success'                       => ['content' => "Conteúdo da mensagem de sucesso.", 'status' => "success"],
     'warning'                       => ['content' => "Conteúdo da mensagem de aviso.", 'status' => "warning"],
 
+    'account' => [
+        'password_updated'          => ['content' => "Senha atualizada.", 'status' => "success"],
+
+        'must_be_different'         => 'A antiga senha está incorreta.',
+        'you_are_not'               => 'Você não é você.',
+    ],
+
     'admin' => [
         'you_are_not'               => ['content' => "Você não é um Super Admin!", 'status' => "warning"],
     ],
