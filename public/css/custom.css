@@ -128,18 +128,57 @@ button.form-auth:hover, a.form-auth:hover {
 
 
 /* series - index */
-.list-group-item.series {
-    background-color: none;
-    border: 1px solid #cf81a5;
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    list-style: none;
+    padding: 16px 0 64px 0;
+}
+
+.series-grid li {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #18C29C;
+    width: 100%;
+    max-width: 950px;
+    border-radius: 8px;
+    padding: 10px 10px 0 10px;
+}
+
+.series-grid li img {
+    width: 100%;
+    max-height: 200px;
+    max-width: 350px;
+    border-radius: 8px;
+    border: 1px solid rgba(225, 225, 226, 0.5);
+    margin-bottom: 10px;
+}
+
+.series-grid li span {
     color: #18C29C;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
-.list-group-item.series > a {
-    color: #410320;
+.series-grid li span h2 {
+    color: #18C29C;
+    font-size: 16px;
 }
 
-.list-group-item.series > a:hover {
-    color: #812852
+.series-grid li span h3 {
+    color: #18C29C;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.series-grid-buttons {
+    display: flex;
+    justify-content: end;
+    color: #18C29C;
+    font-size: 8px;
+    margin-bottom: 8px;
 }
 
 /* series create - begin */

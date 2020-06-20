@@ -15,6 +15,7 @@ return [
 
     'account' => [
         'password_updated'          => ['content' => "Senha atualizada.", 'status' => "success"],
+        'password_not_updated'      => ['content' => "Não foi possível atualizar a senha.", 'status' => "danger"],
 
         'must_be_different'         => 'A antiga senha está incorreta.',
         'you_are_not'               => 'Você não é você.',

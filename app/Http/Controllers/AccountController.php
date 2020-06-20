@@ -6,6 +6,7 @@ use App\Helpers\FlashMessages;
 use App\Http\Requests\Account\UpdatePasswordAccountRequest;
 use App\Model\Log;
 use App\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -33,11 +34,20 @@ class AccountController extends Controller
 
     public function updatePassword(UpdatePasswordAccountRequest $request)
     {
-        $user = User::find(auth()->user()->id);
-        // dd($request->all(), auth()->user(), $user);
-        $user->update(['password' => Hash::make($request->new_password)]);
+        try {
 
-        $this->flashMessage([trans('messages.account.password_updated')]);
-        return redirect()->route('account.page.index');
+            User::find(auth()->user()->id)
+                ->update([
+                    'password' => Hash::make($request->new_password)
+                ]);
+    
+            $this->flashMessage([trans('messages.account.password_updated')]);
+            return redirect()->route('account.page.index');
+
+        } catch (Exception $e) {
+
+            $this->flashMessage([trans('messages.account.password_not_updated')]);
+            return redirect()->back();
+        }
     }
 }
