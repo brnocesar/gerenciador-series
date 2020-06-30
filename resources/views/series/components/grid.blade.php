@@ -16,7 +16,11 @@
                         >
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-sm default-button-danger"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-sm default-button-danger"><i class="fas fa-trash"></i></button>
+                        </form>
+                        <form method="post" action="">
+                            @csrf
+                            <button class="btn btn-sm default-button-danger ml-1 mr-1"><i class="fas fa-edit"></i></button>
                         </form>
                     @endif
 
@@ -25,7 +29,7 @@
                             onsubmit="return confirm('Adiciona {{ addslashes($serie->nome)}} as minhas séries?')"
                         >
                             @csrf
-                            <button class="btn btn-sm default-button ml-1"><i class="fas fa-plus"></i></button>
+                            <button class="btn btn-sm default-button"><i class="fas fa-plus"></i></button>
                         </form>
                     @endif
                 </span>
